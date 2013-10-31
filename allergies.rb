@@ -19,6 +19,10 @@ class Allergies
     ALLERGIES.keys.select { |key| key & @score == key }.map { |key| ALLERGIES.fetch(key)}
   end
 
+  def allergic_to?(allergen)
+    ALLERGIES.key(allergen) & @score == ALLERGIES.key(allergen)
+  end
+
 
 
 end

@@ -44,7 +44,6 @@ class AllergiesTest < MiniTest::Unit::TestCase
   end
 
   def test_no_allergies_means_not_allergic
-    skip
     allergies = Allergies.new(0)
     assert !allergies.allergic_to?('peanuts')
     assert !allergies.allergic_to?('cats')
