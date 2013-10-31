@@ -51,19 +51,16 @@ class AllergiesTest < MiniTest::Unit::TestCase
   end
 
   def test_is_allergic_to_eggs
-    skip
     allergies = Allergies.new(1)
     assert allergies.allergic_to?('eggs')
   end
 
   def test_allergic_to_eggs_in_addition_to_other_stuff
-    skip
     allergies = Allergies.new(5)
     assert allergies.allergic_to?('eggs')
   end
 
   def test_ignore_non_allergen_score_parts
-    skip
     allergies = Allergies.new(509)
     assert_equal ['eggs', 'shellfish', 'strawberries', 'tomatoes', 'chocolate', 'pollen', 'cats'], allergies.list
   end
